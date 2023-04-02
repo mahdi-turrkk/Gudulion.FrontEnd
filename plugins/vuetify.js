@@ -31,6 +31,7 @@ const darkTheme = {
 }
 export default defineNuxtPlugin(nuxtApp => {
     const vuetify = createVuetify({
+        rtl : true,
         components,
         directives,
         theme: {
