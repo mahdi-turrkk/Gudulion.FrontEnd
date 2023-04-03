@@ -146,7 +146,7 @@
       </v-list>
     </v-navigation-drawer>
     <slot/>
-    <v-footer class="bg-primary" app>
+    <v-footer class="bg-primary">
       <v-row justify="center" no-gutters>
         <v-col class="text-center text-background" cols="12">
           Made With ❤️ In GUDULION
