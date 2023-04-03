@@ -70,7 +70,7 @@ import {useTheme} from "vuetify";
 
 let isDragging = ref(false)
 let files = ref([])
-let props = defineProps(['numberOfFiles', 'fileType', 'n', 'i'])
+let props = defineProps(['fileType'])
 let file = ref(null)
 const emit = defineEmits(["filesChanged"])
 function onChange() {

@@ -1,6 +1,6 @@
 <template>
   <v-app app style="direction: rtl">
-    <v-app-bar :elevation="0" color="primary">
+    <v-app-bar :elevation="0" color="primary" class="mb-16">
       <v-btn icon class="d-inline-block d-lg-none" @click="drawer = !drawer">
         <v-icon color="background" size="35">mdi-menu</v-icon>
       </v-btn>
