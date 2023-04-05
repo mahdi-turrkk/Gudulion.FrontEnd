@@ -82,6 +82,10 @@
                         </v-avatar>
                         <div class="d-inline-block mr-4 text-info">{{ user.name }}</div>
                     </v-list-item>
+                    <v-list-item @click="toggleTheme">
+                            <v-icon color="info" size="30">mdi-theme-light-dark</v-icon>
+                            <div class="d-inline-block mr-4 text-info">تغییر پوسته</div>
+                    </v-list-item>
                     <v-list-item style="cursor: pointer">
                         <v-icon color="info" size="30">mdi-logout</v-icon>
                         <div class="d-inline-block mr-4 text-info">خروج از حساب کاربری</div>
@@ -174,9 +178,7 @@
         <v-footer class="bg-primary">
             <v-row justify="center" no-gutters>
                 <v-col class="text-center text-background" cols="12">
-                    <div>
-                        Made With ❤️ In GUDULION
-                    </div>
+                    Made With ❤️ In GUDULION
                 </v-col>
             </v-row>
         </v-footer>
@@ -185,6 +187,8 @@
 <script setup>
 import {useTheme} from "vuetify";
 
+const theme = useTheme()
+function toggleTheme() { theme.global.name.value = theme.global.current.value.dark ? 'lightTheme' : 'darkTheme'}
 let drawer = ref(false)
 let user = reactive({
     name: "نیلوفر شاه حسینی",
