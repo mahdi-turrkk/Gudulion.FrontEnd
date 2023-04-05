@@ -26,6 +26,7 @@
                         hide-details
                         v-model="username"
                         label="نام کاربری"
+                        class="text-primary"
                     ></v-text-field>
                   </v-col>
                   <v-col
@@ -40,6 +41,7 @@
                         hide-details
                         v-model="password"
                         label="رمز عبور"
+                        class="text-primary"
                         type="password"
                     ></v-text-field>
                   </v-col>
