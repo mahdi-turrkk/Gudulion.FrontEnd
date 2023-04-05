@@ -1,7 +1,7 @@
 <template>
-    <v-container fluid class="mt-10 px-0">
-        <v-card class="ma-4 bg-transparent elevation-0 text-center" height="300" style="overflow: visible" v-if="files.length">
-            <img height="300" :src="generateURL(files[0])" style="border-radius: 20px" alt="image"/>
+    <v-container fluid class="px-0">
+        <v-card class="bg-transparent elevation-0 text-center" max-height="300" style="overflow: visible" v-if="files.length">
+            <img :src="generateURL(files[0])" style="border-radius: 20px;max-width: 100%;max-height: 300px" alt="image"/>
             <v-btn
                     color="error"
                     dark
@@ -17,7 +17,6 @@
                 v-if="!files.length"
                 style="height: 270px; border: 3px dashed;border-radius: 20px;text-transform: capitalize"
                 :style="{'border-color' : useTheme().current.value.colors.primary}"
-                class="mt-4"
                 :class="{'pt-4 pt-6' : !files.length}"
                 @dragover="dragover"
                 @dragleave="dragleave"
@@ -66,7 +65,7 @@ let file = ref(null)
 const emit = defineEmits(["filesChanged"])
 function onChange() {
     files.value.push(...file.value.files);
-    emit("filesChanged", files.value, props.n, props.i);
+    emit("filesChanged", files.value[0]);
 }
 
 function dragover(e) {
@@ -87,7 +86,7 @@ function drop(e) {
 
 function remove(i) {
     files.value.splice(i, 1);
-    emit("filesChanged", files.value);
+    emit("filesChanged", files.value[0]);
 }
 
 function generateURL(file) {
