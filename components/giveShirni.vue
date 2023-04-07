@@ -22,7 +22,7 @@
         </v-row>
         <v-row v-if="paymentType === 'shirni'">
             <v-col cols="12" class="text-h5 text-md-h4 text-primary">مشخصات</v-col>
-            <v-col cols="12" class="px-6 text-subtitle-6 text-md-h5 text-secondary">{{ data.name }} گرفتگان</v-col>
+            <v-col cols="12" class="px-6 text-h6 text-md-h5 text-secondary">{{ data.name }} گرفتگان</v-col>
             <v-col cols="12" class="px-6">
                 <v-select
                         closable-chips
@@ -41,11 +41,11 @@
                         hide-details
                 ></v-select>
             </v-col>
-            <v-col cols="12" class="px-6 text-subtitle-6 text-md-h5 text-secondary">تاریخ</v-col>
+            <v-col cols="12" class="px-6 text-h6 text-md-h5 text-secondary">تاریخ</v-col>
             <v-col cols="12" md="6" lg="4" class="px-6">
                 <!--               TODO jalali date picker-->
             </v-col>
-            <v-col cols="12" class="px-6 text-subtitle-6 text-md-h5 text-secondary">توضیحات</v-col>
+            <v-col cols="12" class="px-6 text-h6 text-md-h5 text-secondary">توضیحات</v-col>
             <v-col cols="12" class="px-6 text-secondary">
                 <v-textarea
                         label="توضیحات"
@@ -63,13 +63,13 @@
         <v-row v-else>
             <v-col cols="12" class="text-h5 text-md-h4 text-primary">مشخصات</v-col>
             <v-col cols="12" md="6" class="mt-4 mt-md-6 px-9">
-                <v-row class=" mb-4 mb-md-5text-subtitle-6 text-md-h5 text-secondary">تاریخ</v-row>
+                <v-row class=" mb-4 mb-md-5 text-h6 text-md-h5 text-secondary">تاریخ</v-row>
                 <v-row>
                     <!--               TODO jalali date picker-->
                 </v-row>
             </v-col>
             <v-col cols="12" md="6" class="mt-4 mt-md-6 px-9">
-                <v-row cols="12" md="6" class="mb-4 mb-md-5 text-subtitle-6 text-md-h5 text-secondary">کد پیگیری بانکی
+                <v-row cols="12" md="6" class="mb-4 mb-md-5 text-h6 text-md-h5 text-secondary">کد پیگیری بانکی
                 </v-row>
                 <v-row>
                     <v-text-field
@@ -86,7 +86,7 @@
                 </v-row>
             </v-col>
             <v-col cols="12" md="6" class="mt-4 mt-md-6 px-9">
-                <v-row cols="12" md="6" class="mb-4 mb-md-5 text-subtitle-6 text-md-h5 text-secondary">نام فرد انتقال
+                <v-row cols="12" md="6" class="mb-4 mb-md-5 text-h6 text-md-h5 text-secondary">نام فرد انتقال
                     دهنده
                 </v-row>
                 <v-row>
@@ -104,7 +104,7 @@
                 </v-row>
             </v-col>
             <v-col cols="12" md="6" class="mt-4 mt-md-6 px-9">
-                <v-row cols="12" md="6" class="mb-4 mb-md-5 text-subtitle-6 text-md-h5 text-secondary">مقدار انتقال داده
+                <v-row cols="12" md="6" class="mb-4 mb-md-5 text-h6 text-md-h5 text-secondary">مقدار انتقال داده
                     شده
                 </v-row>
                 <v-row>
@@ -122,7 +122,7 @@
                     ></v-text-field>
                 </v-row>
             </v-col>
-            <v-col cols="12" class="px-6 text-subtitle-6 text-md-h5 text-secondary">توضیحات</v-col>
+            <v-col cols="12" class="px-6 text-h6 text-md-h5 text-secondary">توضیحات</v-col>
             <v-col cols="12" class="px-6 text-secondary">
                 <v-textarea
                         label="توضیحات"
