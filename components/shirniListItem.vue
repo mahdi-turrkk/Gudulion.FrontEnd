@@ -1,7 +1,7 @@
 <template>
     <v-container fluid class="pa-0 ma-0">
         <v-card color="background" elevation="5" class="py-1 px-2" style="border-radius: 20px">
-            <div class="py-2 px-4 d-none d-lg-block">
+            <div class="py-2 px-4" v-if="useDisplay().lgAndUp.value">
                 <div class="d-inline-block text-subtitle-1 text-md-h6 text-info" style="width: 12%">
                     {{ data.trackingCode }}
                 </div>
@@ -30,8 +30,8 @@
                            size="30"></v-btn>
                 </div>
             </div>
-            <v-expansion-panels class="d-block d-lg-none" variant="accordion">
-                <v-expansion-panel class="bg-transparent d-none d-sm-block d-lg-none">
+            <v-expansion-panels variant="accordion" v-if="useDisplay().mdAndDown.value">
+                <v-expansion-panel class="bg-transparent" v-if="useDisplay().md.value || useDisplay().sm.value">
                     <v-expansion-panel-title class="py-2 px-4">
                         <v-row no-gutters>
                             <v-col cols="12">
@@ -87,7 +87,7 @@
                         </v-row>
                     </v-expansion-panel-text>
                 </v-expansion-panel>
-                <v-expansion-panel class="bg-transparent d-block d-sm-none">
+                <v-expansion-panel class="bg-transparent" v-if="useDisplay().xs.value">
                     <v-expansion-panel-title class="py-2 px-4">
                         <v-row no-gutters>
                             <v-col cols="12">
@@ -146,6 +146,9 @@
 </template>
 
 <script setup>
+
+
+import {useDisplay} from "vuetify";
 
 const props = defineProps(['data'])
 
