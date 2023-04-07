@@ -1,9 +1,5 @@
 <template>
-  <v-container>give Khorma page</v-container>
+    <v-container class="mt-16 px-lg-10" fluid>
+        <give-shirni :data="{title : 'کات' , name : 'خرما'}"/>
+    </v-container>
 </template>
-
-<script>
-export default {
-  name : "giveKhorma"
-}
-</script>
