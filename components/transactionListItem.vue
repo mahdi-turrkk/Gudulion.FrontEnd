@@ -34,7 +34,7 @@
                                          style="width: 20%">
                                         {{ index }}
                                     </div>
-                                    <div class="d-inline-block text-subtitle-1 text-md-h6 text-info"
+                                    <div class="d-inline-block text-subtitle-1 text-md-h6 text-info text-center"
                                          style="width: 40%">
                                         {{ data.title }}
                                     </div>

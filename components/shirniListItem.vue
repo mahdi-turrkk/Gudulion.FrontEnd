@@ -132,7 +132,7 @@
                                     &nbsp{{ data.personName }}
                                 </div>
                             </v-col>
-                            <v-col cols="12" class="mt-4 d-block d-sm-none">
+                            <v-col cols="12" class="mt-4 d-block d-sm-none" style="direction: ltr">
                                 <v-btn color="success" class="text-background mx-1">تایید</v-btn>
                                 <v-btn color="success" class="text-background mx-1">پرداخت</v-btn>
                                 <v-btn color="success" class="text-background mx-1">اطلاعات</v-btn>

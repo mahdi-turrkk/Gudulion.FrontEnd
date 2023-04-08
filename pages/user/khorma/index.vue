@@ -1,5 +1,5 @@
 <template>
-    <v-container className="mt-16 px-lg-10" fluid>
+    <v-container class="mt-16 px-lg-10" fluid>
         <shirni-list :datas="khorma"/>
     </v-container>
 </template>
