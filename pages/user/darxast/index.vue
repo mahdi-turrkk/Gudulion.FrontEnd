@@ -1,15 +1,28 @@
 <template>
     <v-container fluid class="mt-16 px-lg-10">
         <v-row class="px-2">
-            <v-col cols="12" sm="6" md="5" lg="4" xl="3" class="px-0">
-                <v-text-field
-                        label="فیلتر بر اساس عنوان"
-                        variant="underlined"
-                        color="primary"
-                        append-icon="mdi-filter"
-                        @click:append="filter"
-                        :style="{'color' : useTheme().current.value.colors.primary}"
-                ></v-text-field>
+            <v-col cols="12" class="px-0">
+                <div class="d-flex flex-row justify-space-between">
+                    <div class="d-inline-block" style="width: 250px">
+                        <v-text-field
+                                label="فیلتر بر اساس عنوان"
+                                variant="underlined"
+                                color="primary"
+                                append-icon="mdi-filter"
+                                @click:append="filter"
+                                :style="{'color' : useTheme().current.value.colors.primary}"
+                        ></v-text-field>
+                    </div>
+                    <div class="d-inline-block">
+                        <v-btn append-icon="mdi-plus thick" color="primary" class="text-background"
+                               style="border-radius: 15px"
+                               v-if="useDisplay().mdAndUp.value">
+                            ثبت درخواست جدید
+                        </v-btn>
+                        <v-btn icon="mdi-plus thick" color="primary" class="text-background mt-3" size="x-small"
+                               v-if="useDisplay().smAndDown.value"></v-btn>
+                    </div>
+                </div>
             </v-col>
         </v-row>
         <v-card color="primary" elevation="5" class="py-1 px-2" style="border-radius: 20px">
@@ -63,7 +76,7 @@
 </template>
 
 <script setup>
-import {useTheme} from "vuetify";
+import {useDisplay, useTheme} from "vuetify";
 
 let darxasts = ref([
     {
