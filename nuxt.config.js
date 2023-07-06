@@ -17,5 +17,13 @@ export default defineNuxtConfig({
   components : true,
   buildModules: [
     '@nuxtjs/pwa'
-  ]
+  ],
+  pwa: {
+    icon: false, // disables the icon module
+    manifest: {
+      name: 'GUDULION',
+      lang: 'fa',
+      useWebmanifestExtension: false
+    }
+  }
 })
